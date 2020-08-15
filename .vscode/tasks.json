@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build in container (From window)",
+            "command": "docker run -v \"${workspaceFolder}\":/workspace --rm gcc_build_container ./workspace/build_with_rpath.sh",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "clean containers",
+            "command": "docker rm $( docker ps -a -q)",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault":true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Prepare to debug",
+            "command": "docker run -v \"${workspaceFolder}\":/workspace --name gcc_run_container -it gcc_build_container",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault":true
+            }
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+bin/*
+lib/libmyfunction.so
+hello-world.o
+myfunction.o
