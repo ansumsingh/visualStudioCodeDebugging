@@ -3,6 +3,26 @@
     "tasks": [
         {
             "type": "shell",
+            "label": "Build container (window)",
+            "command": "./build_container.bat",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build container (linux)",
+            "command": "./build_container.sh",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
             "label": "g++ build in container (From window)",
             "command": "docker run -v \"${workspaceFolder}\":/workspace --rm gcc_build_container ./workspace/build_with_rpath.sh",
             "problemMatcher": [],
