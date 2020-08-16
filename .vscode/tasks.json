@@ -23,7 +23,7 @@
         },
         {
             "type": "shell",
-            "label": "g++ build in container (From window)",
+            "label": "g++ build in container",
             "command": "docker run -v \"${workspaceFolder}\":/workspace --rm gcc_build_container ./workspace/build_with_rpath.sh",
             "problemMatcher": [],
             "group": {
