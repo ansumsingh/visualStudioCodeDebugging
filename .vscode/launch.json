@@ -20,6 +20,9 @@
                 "pipeArgs": ["exec", "-i", "gcc_run_container","sh", "-c"],
                 "pipeCwd": "${workspaceRoot}"
             },
+            "sourceFileMap": {
+                "/workspace": "${workspaceRoot}"
+            },
             "filterStderr": true,
             "filterStdout": true,
             "MIMode": "gdb",
